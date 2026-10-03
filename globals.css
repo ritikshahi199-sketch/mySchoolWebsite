@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   Rapid & Smooth Stop Entry Animations
+   ========================================== */
+@keyframes rapidSlideLeft {
+  0% { opacity: 0; transform: translateX(-80px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rapidSlideRight {
+  0% { opacity: 0; transform: translateX(80px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rapidSlideBottom {
+  0% { opacity: 0; transform: translateY(80px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rapidSlideTop {
+  0% { opacity: 0; transform: translateY(-80px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-rapid-left {
+  animation: rapidSlideLeft 0.45s cubic-bezier(0, 0.9, 0.2, 1) forwards;
+}
+
+.animate-rapid-right {
+  animation: rapidSlideRight 0.45s cubic-bezier(0, 0.9, 0.2, 1) forwards;
+}
+
+.animate-rapid-bottom {
+  animation: rapidSlideBottom 0.45s cubic-bezier(0, 0.9, 0.2, 1) forwards;
+}
+
+.animate-rapid-top {
+  animation: rapidSlideTop 0.45s cubic-bezier(0, 0.9, 0.2, 1) forwards;
+}
